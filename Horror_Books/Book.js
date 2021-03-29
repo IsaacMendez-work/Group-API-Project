@@ -1,39 +1,24 @@
-var requests, OpenLibrary;
-(function () {
-    'use strict';
+var requests = {
+    get: function(url, callback) {
+        $.get(url, function(results) {})
+        .done(function(data) {
+            if (callback) { callback(data); }
+        });
+    },
+};
 
-    $.support.cors = true    
-
-    requests = {
-	get: function(url, callback) {
-	    $.get(url, function(results) {
-	    }).done(function(data) {
-		if (callback) { callback(data); }
-	    });
-	},
-
-	post: function(url, data, callback) {
-	    $.post(url, data, function(results) {
-	    }).done(function(data) {
-		if (callback) { callback(data); }
-	    });
-	},
-
-	put: function(url, data, callback) {
-	    $.put(url, data, function(results) {
-	    }).done(function(data) {
-		if (callback) { callback(data); }
-	    });
-	},
-    };
-
-    OpenLibrary = {
+var bookAPI = {
 	search: function(query, callback) {
 	    var url = "https://openlibrary.org/search/inside.json?q=" + query
 	    requests.get(url, function(response) { callback(response.hits.hits) } );
 	},
-    };
+};
 
+(function () {  
+    var debounce = (func, threshold, execAsap) => {
+        var timeout;
+        return function debounced
+    }
     var debounce = function (func, threshold, execAsap) {
 	var timeout;
 	return function debounced () {
@@ -59,7 +44,7 @@ var requests, OpenLibrary;
     }, 100, false));
     
     $(document).keyup('#booksearch', debounce(function(event) {
-	OpenLibrary.search($('#booksearch input').val(), function(results) {
+	bookAPI.search($('#booksearch input').val(), function(results) {
 	    var match = results[0];
 	    $('.bookmatch').removeClass('loader');
 	    $('.bookmatch').append(
