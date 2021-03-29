@@ -17,11 +17,17 @@ var bookAPI = {
 (function () {  
     var debounce = (func, threshold, execAsap) => {
         var timeout;
-        return function debounced
+        return function beenBounced() {
+            var obj = this;
+            var args = arguments;
+            function delayed() {
+                if (!execAsap) 
+            }
+        }
     }
     var debounce = function (func, threshold, execAsap) {
 	var timeout;
-	return function debounced () {
+	return function beenBounced () {
 	    var obj = this, args = arguments;
 	    function delayed () {
 		if (!execAsap)
