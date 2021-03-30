@@ -2,7 +2,7 @@ html {
   height: 100%;
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 100%);
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 }
   
 h1.logo {
-  font-family: 'Slackey', cursive;
+  font-family: cursive;
 }
 
 h1.page-title {
@@ -75,7 +75,7 @@ input:focus {
   max-width: 400px;
   width: 100%;
   font-size: 1.5em;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
 }
 
@@ -96,13 +96,15 @@ a {
   color: #fff
 }
 
-.loader {
+/* loading emoji start */
+.knifeLoading {
+  background-image: "/knife-svg-19.png";
   margin: 0 auto;
-  border: 15px solid #fff; /* Light grey */
-  background-color: #333;
+  border: 15px solid #fff;
+  /* background-color: #333; */
   border-radius: 5px;
   text-align: center;
-  font-size: 2em;
+  /* font-size: 2em; */
   width: 150px;
   height: 200px;
   animation: spin 2s linear infinite;
@@ -112,8 +114,11 @@ a {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* loading emoji ends */
 
 
+/* loaded results */
+/*
 .bookmatch {
   text-align: center;
 }
@@ -124,3 +129,5 @@ a {
   margin: 0 auto;
   border: 15px solid #fff;
 }
+*/ 
+/* Loaded results */
