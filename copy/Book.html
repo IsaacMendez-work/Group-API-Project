@@ -1,36 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="A group project using APIs">
-    <title>Group 6 API Project</title>
-    <link rel="stylesheet" type="text/css" href="book.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-	<script type="text/javascript" src="book.js"></script>
-    </head>
-    <body>
-	<div class="topbar">
-	  <h1 class="logo">
-	    <img src="link"/><a href="#">Group 6</a>
-	  </h1>
-	</div>
+    <title>Books Galore!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Slackey&family=Roboto:wght@100;300;900&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="horror-book-api-project.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <h1 class="logo">
+            <img src="horrorlogo.png" /><a href="#">Library of Horrors</a>
+        </h1>
+    </div>
+    <div class="cont">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="border"></div>
+        <div class="border"></div>
+        <svg>
+            <defs>
+                <filter id='goo'>
+                    <feGaussianBlur in='SourceGraphic' stdDeviation='10' />
+                    <feColorMatrix in='name' mode='matrix' values='1 0 0 0 0 
+						   0 1 0 0 0
+						   0 0 1 0 0
+						   0 0 0 30 -15' />
+                    <feBlend in='SourceGraphic' />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <div class="home-spacer">
+        <h1 class="page-title">Ready to Get Your Scare On?</h1>
+        <form id="booksearch">
+            <input name="query" type="text" placeholder="Search for a quote, text, or keywords">
+        </form>
+    </div>
+    <br><br>
+    <div class="bookmatch">
+    </div>
+    <br><br>
+    <br><br>
+    <div id="footer-container">
+        <footer>
+            <p>A Group 6 Experiment 2021&copy; </p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="horror-book-api-project.js"></script>
+</body>
 
-	<div>
-	  <h1>Book Search</h1>
-
-	  <form id="booksearch">
-	    <input name="query" type="text" placeholder="">
-	  </form>
-	</div>
-
-	<div class="bookmatch">
-	</div>
-	
-	<footer>
-	  <p>Footer</p>
-	</footer>
-
-    </body>
 </html>
